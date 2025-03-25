@@ -21,9 +21,15 @@ jobs:
     - name: AutoTrigger
       uses: otwin/ActionBot@main
 
+#    - name: Delete workflow runs
+#      uses: otwin/delete-workflow-runs@main
+#      with:
+#        keep_minimum_runs: 1
+
     - name: Delete workflow runs
-      uses: otwin/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@v2.0.5
       with:
+        retain_days: 1
         keep_minimum_runs: 1
 
     - name: Remove old Releases
